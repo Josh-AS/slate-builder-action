@@ -1,11 +1,11 @@
-FROM ruby:2.7
+FROM ruby:2.7-alpine
 
 ENV SLATE_DOCS_PATH=${SLATE_DOCS_PATH:-"/usr/src/docs"}
 
 WORKDIR /usr/src/app
 
-RUN apt-get update
-RUN apt-get install git nodejs -y
+RUN apk update
+RUN apk add git nodejs make g++
 RUN git clone https://github.com/Josh-AS/slate.git /usr/src/app
 RUN bundle install
 
