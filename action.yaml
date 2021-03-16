@@ -11,8 +11,7 @@ inputs:
 runs:
   using: "docker"
   image: "joshas/slatedocs-builder:v0.0.1"
-  args: 
-    - -v ${{ inputs.docsPath }}:/usr/src/docs
+  args: -v $(pwd)${{ inputs.docsPath }}:/usr/src/docs
 
 branding: 
   icon: align-center
