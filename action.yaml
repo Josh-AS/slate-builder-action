@@ -9,8 +9,10 @@ inputs:
     default: "/"
 
 runs:
-  using: "docker"
-  image: "Dockerfile"
+  using: "composite"
+  steps:
+    - run: docker build --tag slatebuilder .
+    - run: docker run -it --rm --env SLATE_DOCS_PATH=${{inputs.docsPath}} -v ${{inputs.docsPath}}:/usr/src/docs slatebuilder env
 
 branding: 
   icon: align-center
