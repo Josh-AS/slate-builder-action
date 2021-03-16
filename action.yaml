@@ -11,7 +11,8 @@ inputs:
 runs:
   using: "docker"
   image: "Dockerfile"
-  options: -v $PWD${{ inputs.docsPath }}:/usr/src/docs
+  args: 
+    - "-v $PWD${{ inputs.docsPath }}:/usr/src/docs"
 
 branding: 
   icon: align-center
