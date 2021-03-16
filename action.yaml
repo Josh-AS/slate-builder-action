@@ -10,8 +10,9 @@ inputs:
 
 runs:
   using: "docker"
-  image: "joshas/slatedocs-builder:v0.0.1"
-  args: -v $(pwd)${{ inputs.docsPath }}:/usr/src/docs
+  image: "Dockerfile"
+  args: 
+    - -v ${{ github.action_path }}${{ inputs.docsPath }}:/usr/src/docs
 
 branding: 
   icon: align-center
