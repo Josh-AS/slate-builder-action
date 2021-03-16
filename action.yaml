@@ -2,6 +2,12 @@ name: SlateDocs Builder
 description: A Github Action that allows you to build slate documentation.
 author: JoshAS <josh@asteriskstudios.co.uk>
 
+inputs:
+  docsPath:
+    description: "Path to the folder containing your .md files, from the root of the repo. Defaults to the root folder"
+    required: false
+    default: "/"
+
 runs:
   using: "docker"
   image: "Dockerfile"
