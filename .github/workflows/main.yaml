@@ -10,4 +10,4 @@ jobs:
       - name: Docs Builder
         uses: ./
         with:
-          docsPath: /docs
+          docsPath: ./docs
