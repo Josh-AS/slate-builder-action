@@ -1,0 +1,8 @@
+name: Validate Action
+on: push
+jobs:
+  validate:
+    - name: Validate
+      uses: ./
+      with:
+        docsPath: /docs
