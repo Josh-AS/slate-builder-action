@@ -1,5 +1,8 @@
 #!/bin/sh
 
-mv $GITHUB_WORKSPACE$INPUT_DOCSPATH/index.html.md /usr/src/docs/index.html.md
-cd /usr/src/docs/
+cd docs
+mv index.html.md /usr/src/docs/index.html.md
+ls
+
+cd /usr/src/docs
 ls
