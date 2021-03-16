@@ -9,5 +9,3 @@ jobs:
         uses: actions/checkout@v2
       - name: Docs Builder
         uses: ./
-        with:
-          docsPath: ./docs
