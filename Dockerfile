@@ -7,7 +7,7 @@ ENV SLATE_DOCS_PATH=${SLATE_DOCS_PATH:-"/usr/src/docs"}
 
 WORKDIR /usr/src/slate
 
-COPY scripts/*.sh /usr/src
+COPY scripts/*.sh /usr/src/
 
 RUN apk update && \
     apk add git nodejs g++ make && \
