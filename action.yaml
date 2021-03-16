@@ -12,7 +12,7 @@ runs:
   using: "docker"
   image: "Dockerfile"
   args: 
-    - -v ${{ GITHUB_WORKSPACE }}${{ inputs.docsPath }}:/usr/src/docs
+    - -v ${{ inputs.docsPath }}:/usr/src/docs
 
 branding: 
   icon: align-center
