@@ -1,2 +1,4 @@
 # slate-builder-action
 A Github Action for building Slate Documentation
+
+**THIS ACTION SHOULD NOT BE USED, IT IS CURRENTLY IN DEVELOPMENT AND THE VERSION ON GITHUB DOES NOT FUNCTION PROPERLY**

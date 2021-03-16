@@ -1,0 +1,5 @@
+name: Slate Documentation Builder
+author: JoshAS <josh@asteriskstudios.co.uk>
+runs:
+  using: "docker"
+  image: "Dockerfile"
