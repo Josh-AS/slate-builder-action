@@ -2,7 +2,10 @@ name: Validate Action
 on: push
 jobs:
   validate:
-    - name: Validate
-      uses: ./
-      with:
-        docsPath: /docs
+    name: Validate
+    runs-on: ubuntu-latest
+    steps:
+      - name: Docs Builder
+        uses: ./
+        with:
+          docsPath: /docs
