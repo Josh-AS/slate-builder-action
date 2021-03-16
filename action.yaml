@@ -10,7 +10,7 @@ inputs:
 
 runs:
   using: "docker"
-  image: "Dockerfile"
+  image: "joshas/slatedocs-builder:v0.0.1"
   args: 
     - -v $(pwd)${{ inputs.docsPath }}:/usr/src/docs
 
