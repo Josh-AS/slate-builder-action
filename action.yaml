@@ -13,7 +13,7 @@ runs:
   steps:
     - run: docker build --tag slatebuilder .
       shell: sh
-    - run: docker run --rm --env SLATE_DOCS_PATH=${{inputs.docsPath}} -v ${{inputs.docsPath}}:/usr/src/docs slatebuilder env
+    - run: docker run --rm --env SLATE_DOCS_PATH=${{inputs.docsPath}} -v $(pwd)${{inputs.docsPath}}:/usr/src/docs slatebuilder env
       shell: sh
 
 branding: 
