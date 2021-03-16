@@ -1,6 +1,6 @@
-#!/bin/sh
+#!/bin/bash
 set -e
 
 cd $GITHUB_WORKSPACE
 
-ls /usr/src/docs
+echo ls

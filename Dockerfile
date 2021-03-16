@@ -10,7 +10,7 @@ WORKDIR /usr/src/slate
 COPY scripts/*.sh /usr/src/
 
 RUN apk update && \
-    apk add git nodejs g++ make && \
+    apk add git nodejs g++ make bash && \
     git clone https://github.com/Josh-AS/slate.git /usr/src/slate && \
     chmod +x /usr/src/*.sh && \
     bundle install
@@ -18,4 +18,4 @@ RUN apk update && \
 VOLUME [ "/usr/src/docs" ]
 
 ENTRYPOINT [ "sh", "/usr/src/prepare.sh" ]
-CMD [ "sh", "/usr/src/build.sh" ]
+CMD [ "bash", "/usr/src/build.sh" ]
