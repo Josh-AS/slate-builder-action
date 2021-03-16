@@ -1,3 +1,2 @@
 #!/bin/sh
-
-ls
+set -e

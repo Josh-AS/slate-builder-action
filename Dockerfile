@@ -1,7 +1,21 @@
 FROM ruby:2.7-alpine
 
-COPY test.sh /usr/src/test.sh
+# COPY test.sh /usr/src/test.sh
+# RUN chmod +x /usr/src/test.sh
 
-RUN chmod +x /usr/src/test.sh
+ENV SLATE_DOCS_PATH=${SLATE_DOCS_PATH:-"/usr/src/docs"}
 
-ENTRYPOINT [ "sh", "/usr/src/test.sh" ]
+WORKDIR /usr/src/slate
+
+COPY scripts/*.sh /usr/src
+
+RUN apk update && \
+    apk add git nodejs g++ make && \
+    git clone https://github.com/Josh-AS/slate.git /usr/src/slate && \
+    chmod +x /usr/src/*.sh && \
+    bundle install
+
+VOLUME [ "/usr/src/docs" ]
+
+ENTRYPOINT [ "sh", "/usr/src/prepare.sh" ]
+CMD [ "sh", "/usr/src/build.sh" ]
