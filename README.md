@@ -17,4 +17,4 @@ Built documentation in the /build directory of the workspace.
 ## Inputs
 
 ### docsPath
-[**Optional, default: / **] Path to the folder containing your documentation source (.md files) 
+[**Optional, default: '/' **] Path to the folder containing your documentation source (.md files) 
