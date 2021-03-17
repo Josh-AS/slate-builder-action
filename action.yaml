@@ -11,7 +11,7 @@ inputs:
 runs:
   using: "composite"
   steps:
-    - run: docker build --tag slatebuilder /github/workspace/
+    - run: docker build --tag slatebuilder $GITHUB_WORKSPACE
       shell: sh
     - run: docker run --rm --env SLATE_DOCS_PATH=${{inputs.docsPath}} -v $(pwd)${{inputs.docsPath}}:/usr/src/docs -v $(pwd)/build:/usr/src/build slatebuilder env
       shell: sh
