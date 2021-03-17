@@ -1,8 +1,6 @@
 #!/bin/bash
 set -e
 
-cd $GITHUB_WORKSPACE
+/bin/cp -rf /usr/src/docs/* /usr/src/slate/source
 
-echo $SLATE_DOCS_PATH
-echo $(ls /usr/src/slate)
-echo $(ls /usr/src/docs)
+exec "$@"

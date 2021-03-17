@@ -16,6 +16,7 @@ RUN apk update && \
     bundle install
 
 VOLUME [ "/usr/src/docs" ]
+VOLUME [ "/usr/src/build" ]
 
-ENTRYPOINT [ "bash", "/usr/src/build.sh" ]
-# CMD [ "bash", "/usr/src/build.sh" ]
+ENTRYPOINT [ "bash", "/usr/src/prepare.sh" ]
+CMD [ "bash", "/usr/src/build.sh" ]
