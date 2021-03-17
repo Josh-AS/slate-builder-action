@@ -17,5 +17,5 @@ RUN apk update && \
 
 VOLUME [ "/usr/src/docs" ]
 
-ENTRYPOINT [ "sh", "/usr/src/prepare.sh" ]
+ENTRYPOINT [ "bash", "/usr/src/prepare.sh" ]
 CMD [ "bash", "/usr/src/build.sh" ]
