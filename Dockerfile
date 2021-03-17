@@ -18,4 +18,4 @@ RUN apk update && \
 VOLUME [ "/usr/src/docs" ]
 VOLUME [ "/usr/src/build" ]
 
-ENTRYPOINT [ "bash", "/usr/src/prepare.sh", "&&", "bash", "/usr/src/build.sh" ]
+ENTRYPOINT [ "/bin/sh", "-c", "bash /usr/src/prepare.sh && bash /usr/src/build.sh"]
