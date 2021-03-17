@@ -1,8 +1,8 @@
-name: Validate Action
+name: Test Action
 on: push
 jobs:
-  validate:
-    name: Validate
+  test:
+    name: Test
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
